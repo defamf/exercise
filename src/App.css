@@ -13,3 +13,23 @@ form {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+li {
+  list-style: none;
+  font-size: large;
+  padding-right: 30px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgb(221, 57, 65);
+}

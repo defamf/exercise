@@ -1,7 +1,7 @@
 import React from "react";
-import "./routing.css";
-import Search from "../../pages/search";
-import Trending from "../../pages/trending";
+import "./App.css";
+import Search from "./pages/search";
+import Trending from "./pages/trending";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Routing = () => {
