@@ -1,8 +1,8 @@
-import gifs from "data/gifs";
-import { ImageComponent } from "components/Gif/index";
+import data from "../../data/gifData";
+import { ImageComponent } from "../../component/gif";
 
 function Home() {
-  const gifList = gifs.map(
+  const gifList = data.map(
     (gif, id) =>
       gif.rating === "g" && (
         <ImageComponent key={id} url={gif.url} title={gif.title} />

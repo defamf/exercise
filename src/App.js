@@ -1,13 +1,13 @@
 import "./App.css";
-import Search from "./pages/search";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import { Routing } from "./component/routing";
 
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Search />
+        <Routing />
       </Provider>
     </div>
   );

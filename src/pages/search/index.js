@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { ImageComponent } from "../../component/gif";
 import { SearchBar } from "../../component/searchBar";
-
-import { searchAction } from "../../redux/slice";
+import { setQuery } from "../../redux/slice";
 
 function Search() {
   const [gifs, setGifs] = useState([]);
-  let { query } = useSelector((state) => state.search);
+  const { query } = useSelector((state) => state.search);
   const dispatch = useDispatch();
   const [found, isFound] = useState(false);
 
@@ -39,7 +38,7 @@ function Search() {
         searchInput={searchInput}
         query={query}
         // getInput={(e) => setQuery(e.target.value)}
-        getInput={(e) => dispatch(searchAction(e.target.value))}
+        getInput={(e) => dispatch(setQuery(e.target.value))}
       />
       {found ? (
         gifs.map((gif, id) => (
@@ -50,7 +49,7 @@ function Search() {
           />
         ))
       ) : (
-        <p>No data to show</p>
+        <p>No data shown</p>
       )}
     </div>
   );
